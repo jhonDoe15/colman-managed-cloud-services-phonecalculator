@@ -1,0 +1,12 @@
+.scannerwork*
+sonar-project.properties
+node_modules*
+build*
+.vscode*
+.git*
+.gitignore*
+.dockerignore*
+Dockerfile
+deployment.yaml
+netlify.toml
+README.md
