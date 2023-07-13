@@ -2,11 +2,15 @@
 # Backend
 
 set the following environment variables:
+```
 PGDATABASE = 'yourdbname'
-PGUSER = 'yourdbloginuser'
-PGPASSWORD = 'yourdbloginpassword'
-PGHOST = 'yourdbaddress'
 
+PGUSER = 'yourdbloginuser'
+
+PGPASSWORD = 'yourdbloginpassword'
+
+PGHOST = 'yourdbaddress'
+```
 these variables will be picked up by the application and help it connect to the provided database
 
 load the data from the 'initial-data-to-load-folder' in the .sql file
