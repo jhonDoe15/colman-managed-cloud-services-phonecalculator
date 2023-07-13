@@ -17,11 +17,16 @@ sonar-project.properties*
 
 # misc
 .DS_Store
-
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+.env
+/back/.env.local
+/back/.env.development.local
+/back/.env.test.local
+/back/.env.production.local
+/back/.env
 .idea
 
 npm-debug.log*

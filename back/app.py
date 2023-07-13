@@ -9,7 +9,7 @@ app.config["DEBUG"] = True
 CORS(app)
 
 app = Flask(__name__)
-con = psycopg2.connect(database="phonedb", user="noam", password="noam", host="127.0.0.1", port="5432")
+con = psycopg2.connect('')
 cursor = con.cursor(cursor_factory = psycopg2.extras.RealDictCursor)
 
 @app.route("/phone/all", methods=['get'])
