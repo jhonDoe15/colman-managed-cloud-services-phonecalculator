@@ -29,7 +29,7 @@ const AddPhoneModal = (props) => {
 
   const sendNewPhone = async () => {
     setLoading(true);
-    await axios.post(`http://localhost:5000/phone`, formData, requestHeaders)
+    await axios.post(`http://` + process.env.API_URL + `/phone`, formData, requestHeaders)
     .catch(() => {
         setLoading(false);
     });
