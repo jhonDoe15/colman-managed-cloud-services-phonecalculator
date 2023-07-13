@@ -10,7 +10,7 @@ const PhoneCard = lazy(() => import('../PhoneCard/PhoneCard'));
 
 const renderLoader = () => <h2>Loading... 🥴</h2>;
 
-const PhonesDisplay = (url, config) => {
+const PhonesDisplay = () => {
 
     const [devices, setDevices] = useState([]);
     const [sliderAntutu, setSliderAntutu] = useState(0);
@@ -114,8 +114,8 @@ const PhonesDisplay = (url, config) => {
         return devices.reduce((prev, curr) => prev.battery_life < curr.battery_life ? curr : prev).battery_life
     }
 
-    useEffect(async (url, config) => {
-        await axios.get(`http://` + process.env.API_URL + `/phone/all`, {}, requestHeaders)
+    useEffect(async () => {
+        await axios.get(`/phone/all`, {}, requestHeaders)
             .then(res => {
                 const devices = res.data;
                 setDevices(devices);

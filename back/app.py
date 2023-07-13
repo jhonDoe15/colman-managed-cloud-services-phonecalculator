@@ -10,7 +10,8 @@ CORS(app)
 
 app = Flask(__name__)
 con = psycopg2.connect('')
-cursor = con.cursor(cursor_factory = psycopg2.extras.RealDictCursor)
+cursor = con.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+
 
 @app.route("/phone/all", methods=['get'])
 @cross_origin(origin='*')
@@ -45,6 +46,7 @@ def add_phone():
             %(antutu_score)s)""", device_object)
     con.commit()
     return "record inserted", 201
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)

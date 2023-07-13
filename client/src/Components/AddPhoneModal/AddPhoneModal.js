@@ -29,7 +29,7 @@ const AddPhoneModal = (props) => {
 
   const sendNewPhone = async () => {
     setLoading(true);
-    await axios.post(`http://` + process.env.API_URL + `/phone`, formData, requestHeaders)
+    await axios.post(`/phone`, formData, requestHeaders)
     .catch(() => {
         setLoading(false);
     });
@@ -43,7 +43,7 @@ const AddPhoneModal = (props) => {
     setFormData((formData) => {
       return {
         ...formData,
-        [e.target.name]: e.target.type == "number" ? e.target.valueAsNumber : e.target.value,
+        [e.target.name]: e.target.type === "number" ? e.target.valueAsNumber : e.target.value,
       };
     });
   };
